@@ -1,10 +1,11 @@
+import { translation } from '@/i18next/server'
+import { LngParams } from '@/type'
 import React from 'react'
 
-const HomePage = () => {
+async function HomePage({params :{lng}} : LngParams) {
+  const {t} = await translation(lng,'home');
   return (
-    <div>
-      Homee
-    </div>
+    <div className='mt-24 font-spaceGrotesk-mono font-medium'>{t("home")}</div>
   )
 }
 
