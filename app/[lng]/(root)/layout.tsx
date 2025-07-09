@@ -1,5 +1,5 @@
 import React from 'react'
-import { Children } from '../../type'
+import { Children } from '../../../type'
 import Navbar from './_components/navbar'
 
 const Layout = ({children} :Children) => {
