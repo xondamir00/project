@@ -1,5 +1,5 @@
-import { Contact, Home, ListVideo, Rss } from "lucide-react"
-
+import { CarTaxiFront, Contact, Home, ListVideo, Rss, User } from "lucide-react"
+import {} from 'react-icons'
 export const  navLinks = [
     {route:'',name:'Home',icon:Home},
     {route:'courses',name:'courses',icon:ListVideo},
@@ -13,3 +13,11 @@ export const lngs =[
     {route:'ru',label:'Русский'},
     {route:'tr',label:'Türkçe'},
 ]
+export const commited = [
+  {  alt: "Google" },
+  {  alt: "Meta" },
+  {  alt: "Amazon" },
+  { alt: "Microsoft" },
+  {  alt: "Netflix" },
+  {  alt: "Apple" },
+];

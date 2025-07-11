@@ -1,11 +1,12 @@
 import { navLinks } from '@/constants'
-import Link from 'next/link'
+
 import React from 'react'
 import Globalsearch from './GlobalSearch'
 import Languagemenu from '@/components/shared/language-menu'
 import { Button } from '@/components/ui/button'
 import { ShoppingCart } from 'lucide-react'
 import Modetoggle from '@/components/shared/mode-toggle'
+import Link from 'next/link'
 
 
 

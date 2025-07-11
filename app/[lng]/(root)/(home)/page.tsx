@@ -1,13 +1,18 @@
 "use client"
-import { useTranslation } from '@/i18next/client';
-import { useParams } from 'next/navigation'
+
+
 import React from 'react'
+import Hero from './_comonents/hero';
+import Mobile from '@/components/shared/mobile';
 
  function HomePage() {
-const {lng} =useParams(); 
-  const {t} = useTranslation(lng as string);
+
 return (
-    <div className='mt-24 font-spaceGrotesk-mono font-medium'>{t("home")}</div>
+    <div className='mt-24 font-spaceGrotesk-mono font-medium'>
+
+    <Mobile/>
+        <Hero/>
+    </div>
   )
 }
 
