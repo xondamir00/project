@@ -14,10 +14,9 @@ export const lngs =[
     {route:'tr',label:'Türkçe'},
 ]
 export const commited = [
-  {  alt: "Google" },
-  {  alt: "Meta" },
-  {  alt: "Amazon" },
-  { alt: "Microsoft" },
-  {  alt: "Netflix" },
-  {  alt: "Apple" },
+  {  image: "/Users/xondamirergashev/Desktop/ssslider/public/assets/apple.webp",alt:"apple" },
+  {  image: "/Users/xondamirergashev/Desktop/ssslider/public/assets/microdoft.png" ,alt:"microsoft"},
+  {  image: "/Users/xondamirergashev/Desktop/ssslider/public/assets/nike.png" ,alt:"Nike"},
+  { image: "/Users/xondamirergashev/Desktop/ssslider/public/assets/samsung.png" ,alt:"samsung"},
+  { image: "/Users/xondamirergashev/Desktop/ssslider/public/assets/xbox.png" ,alt:"xbox"},
 ];

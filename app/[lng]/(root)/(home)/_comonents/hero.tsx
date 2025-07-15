@@ -56,7 +56,7 @@ function Hero() {
                 key={idx}
                 className='basis-1/3 md:basis-1/4 lg:basis-1/6'
               >
-               <Button variant={'outline'}>{item.alt}</Button>
+                <Image  src={item.image} alt={item.alt} width={30} height={30}  />
               </CarouselItem>
             ))}
           </CarouselContent>
