@@ -56,7 +56,7 @@ function Hero() {
                 key={idx}
                 className='basis-1/3 md:basis-1/4 lg:basis-1/6'
               >
-                <Image  src={item.image} alt={item.alt} width={30} height={30}  />
+                <img  src={item.image} alt={item.alt} className='w-[250px] h-[15vh] my-5'  />
               </CarouselItem>
             ))}
           </CarouselContent>

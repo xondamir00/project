@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/provoider/themeprovoider";
 import { Children } from "@/type";
 import { languages } from "@/i18next/settings";
 import {dir} from 'i18next'
+import { ClerkProvider } from "@clerk/nextjs";
 
 const roboto = Roboto({
   weight:['300','400','500','600','700','800','900',],
@@ -31,7 +32,8 @@ export async function generateStaticParams() {
 }
 export default function RootLayout({children,params: {lng}} :Props ) {
   return (
-    <html lang="en" dir={dir(lng)} suppressHydrationWarning>
+    <ClerkProvider>
+      <html lang="en" dir={dir(lng)} suppressHydrationWarning>
       <body
         className={`${roboto.variable} ${spaceGrotesk.variable} antialiased`}
       >
@@ -45,5 +47,6 @@ export default function RootLayout({children,params: {lng}} :Props ) {
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
