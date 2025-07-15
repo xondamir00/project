@@ -8,6 +8,7 @@ import { Children } from "@/type";
 import { languages } from "@/i18next/settings";
 import {dir} from 'i18next'
 import { ClerkProvider } from "@clerk/nextjs";
+import { localization } from "@/lib/utils";
 
 const roboto = Roboto({
   weight:['300','400','500','600','700','800','900',],
@@ -32,9 +33,9 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
 }
 export default function RootLayout({children,params: {lng}} :Props ) {
-  
+  const local = localization(lng)
   return (
-    <ClerkProvider>
+    <ClerkProvider localization={local}>
       <html lang="en" dir={dir(lng)} suppressHydrationWarning>
       <body
         className={`${roboto.variable} ${spaceGrotesk.variable} antialiased`}
