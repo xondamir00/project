@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Roboto,Space_Grotesk} from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,7 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
 }
 export default function RootLayout({children,params: {lng}} :Props ) {
+  
   return (
     <ClerkProvider>
       <html lang="en" dir={dir(lng)} suppressHydrationWarning>
