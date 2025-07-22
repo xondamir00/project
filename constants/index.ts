@@ -1,10 +1,10 @@
 import { CarTaxiFront, Contact, Home, ListVideo, Rss, User } from "lucide-react"
 import {} from 'react-icons'
 export const  navLinks = [
-    {route:'',name:'Home',icon:Home},
+    {route:'',name:'home',icon:Home},
     {route:'courses',name:'courses',icon:ListVideo},
-    {route:'blogs',name:'Blogs',icon:Rss},
-    {route:'contact',name:'Contact',icon:Contact},
+    {route:'blogs',name:'blogs',icon:Rss},
+    {route:'contact',name:'contact',icon:Contact},
 
 ];
 export const lngs =[

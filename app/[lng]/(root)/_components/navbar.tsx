@@ -1,3 +1,4 @@
+'use client'
 import { navLinks } from '@/constants'
 
 import React from 'react'
@@ -9,10 +10,15 @@ import Modetoggle from '@/components/shared/mode-toggle'
 import Link from 'next/link'
 
 
-import { SignInButton, SignUpButton, UserButton,SignedIn,SignedOut } from '@clerk/nextjs'
+import { SignInButton, SignUpButton, UserButton, SignedIn, SignedOut } from '@clerk/nextjs'
+
+
+import useTranslate from '@/hooks/use-translate'
 
 
 const Navbar = () => {
+
+    const { t } = useTranslate()
     return (
         <div className='fixed inset-0 z-40 h-20 bg-background/70 backdrop-blur-xl'>
             <div className='container mx-auto flex h-full max-w-7xl items-center justify-between border-b '>
@@ -20,9 +26,14 @@ const Navbar = () => {
                     <h1 className='text-xl text-foreground'>OnlyCourses</h1>
                     <div className='flex items-center gap-3  pl-2 '>
                         {navLinks.map(nav => (
-                            <Link href={`/${nav.route}`} key={nav.route} className='font-medium transition-all hover:text-blue-500 hover:underline'>
-                                {nav.name}
+                            <Link
+                                href={`/${nav.route}`}
+                                key={nav.route}
+                                className="font-medium transition-all hover:text-blue-500 hover:underline"
+                            >
+                                {t(nav.name)}
                             </Link>
+
                         ))}
                     </div>
                 </div>
@@ -35,21 +46,21 @@ const Navbar = () => {
                         </Button>
                     </div>
                     <SignedIn >
-                        <UserButton/>
+                        <UserButton />
                     </SignedIn>
                     <SignedOut>
-  <SignInButton mode='modal'>
+                        <SignInButton mode='modal'>
                             <Button variant={'ghost'} size={'lg'} className='rounded-full'>
-                            Log in
-                        </Button>
+                                Log in
+                            </Button>
                         </SignInButton>
-                    <SignUpButton mode="modal">
-                        <Button variant={'ghost'} size={'lg'} className='rounded-full'>
-                            Sign in
-                        </Button>
-                    </SignUpButton>
+                        <SignUpButton mode="modal">
+                            <Button variant={'ghost'} size={'lg'} className='rounded-full'>
+                                Sign in
+                            </Button>
+                        </SignUpButton>
                     </SignedOut>
-                      
+
                     <Modetoggle />
 
                 </div>
