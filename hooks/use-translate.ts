@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 function useTranslate(){
     const{lng} =useParams()
-    const t = useTranslation
+    const t = useTranslation(lng)
     return t
 }
 
